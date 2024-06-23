@@ -40,7 +40,7 @@ libro1 = Libro("Cien años de soledad", "Gabriel García Márquez")
 libro2 = Libro("1984", "George Orwell")
 
 # Crear algunos usuarios
-usuario1 = Usuario("Juan")
+usuario1 = Usuario("Jordan")
 usuario2 = Usuario("María")
 
 # Usuario 1 presta un libro
