@@ -1,6 +1,7 @@
 # Programa para calcular el índice de masa corporal (IMC)
 # El usuario ingresa peso en kg y altura en metros, luego se calcula el IMC.
-
+#El programa solicita al usuario que ingrese su peso en kilogramos y su altura en metros.
+#Utiliza la función calcular_imc para calcular el IMC utilizando la fórmula estándar
 def calcular_imc(peso_kg, altura_m):
     """
     Calcula el índice de masa corporal (IMC) dado el peso en kg y la altura en metros.
