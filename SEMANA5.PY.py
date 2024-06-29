@@ -1,3 +1,4 @@
+# BREVE EXPLICACION
 # Programa para calcular el índice de masa corporal (IMC)
 # El usuario ingresa peso en kg y altura en metros, luego se calcula el IMC.
 #El programa solicita al usuario que ingrese su peso en kilogramos y su altura en metros.
