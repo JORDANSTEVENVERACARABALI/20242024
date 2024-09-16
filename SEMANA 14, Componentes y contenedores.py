@@ -9,9 +9,10 @@ class AgendaApp:
         self.root = root
         self.root.title("Agenda Personal")
         self.root.geometry("600x400")
+        self.root.configure(bg="#f0f4f8")  # Fondo profesional
 
         # Frame para la lista de eventos
-        self.frame_eventos = tk.Frame(root)
+        self.frame_eventos = tk.Frame(root, bg="#f0f4f8")
         self.frame_eventos.pack(pady=10)
 
         # Treeview para mostrar los eventos
@@ -22,31 +23,32 @@ class AgendaApp:
         self.tree.pack()
 
         # Frame para los campos de entrada
-        self.frame_entrada = tk.Frame(root)
+        self.frame_entrada = tk.Frame(root, bg="#f0f4f8")
         self.frame_entrada.pack(pady=20)
 
         # Etiquetas y campos de entrada
-        tk.Label(self.frame_entrada, text="Fecha:").grid(row=0, column=0)
+        tk.Label(self.frame_entrada, text="Fecha:", bg="#f0f4f8").grid(row=0, column=0)
         self.date_entry = DateEntry(self.frame_entrada, date_pattern='y-mm-dd')
         self.date_entry.grid(row=0, column=1)
 
-        tk.Label(self.frame_entrada, text="Hora (HH:MM):").grid(row=1, column=0)
+        tk.Label(self.frame_entrada, text="Hora (HH:MM):", bg="#f0f4f8").grid(row=1, column=0)
         self.time_entry = tk.Entry(self.frame_entrada)
         self.time_entry.grid(row=1, column=1)
 
-        tk.Label(self.frame_entrada, text="Descripción:").grid(row=2, column=0)
+        tk.Label(self.frame_entrada, text="Descripción:", bg="#f0f4f8").grid(row=2, column=0)
         self.desc_entry = tk.Entry(self.frame_entrada)
         self.desc_entry.grid(row=2, column=1)
 
-        # Botones
-        self.frame_botones = tk.Frame(root)
+        # Botones con diferentes colores claros
+        self.frame_botones = tk.Frame(root, bg="#f0f4f8")
         self.frame_botones.pack(pady=10)
 
-        tk.Button(self.frame_botones, text="Agregar Evento", command=self.agregar_evento).grid(row=0, column=0, padx=5)
-        tk.Button(self.frame_botones, text="Eliminar Evento Seleccionado", command=self.eliminar_evento).grid(row=0,
-                                                                                                              column=1,
-                                                                                                              padx=5)
-        tk.Button(self.frame_botones, text="Salir", command=root.quit).grid(row=0, column=2, padx=5)
+        tk.Button(self.frame_botones, text="Agregar Evento", bg="#c6e2ff", command=self.agregar_evento).grid(row=0,
+                                                                                                             column=0,
+                                                                                                             padx=5)
+        tk.Button(self.frame_botones, text="Eliminar Evento Seleccionado", bg="#ffcccb",
+                  command=self.eliminar_evento).grid(row=0, column=1, padx=5)
+        tk.Button(self.frame_botones, text="Salir", bg="#d1f0d1", command=root.quit).grid(row=0, column=2, padx=5)
 
         # Lista de eventos (en memoria)
         self.eventos = []
